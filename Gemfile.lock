@@ -81,6 +81,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    pg (0.18.4)
     puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -165,6 +166,7 @@ DEPENDENCIES
   faker
   jwt
   listen (~> 3.0.5)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.2)
   rspec-rails (~> 3.5)
@@ -174,6 +176,9 @@ DEPENDENCIES
   sqlite3
   tzinfo-data
   will_paginate (~> 3.1.0)
+
+RUBY VERSION
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.13.7

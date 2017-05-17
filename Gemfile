@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.3.3'
 
 gem 'rails', '~> 5.0.2'
+gem 'puma', '~>3.8.2'
 
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'

@@ -1,17 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe 'Todos API', type: :request do
+class MakeIt
+  def awesome(text)
+    puts "Awesome #{text}"
+  end
+end
 
-  # add todos owner
-  let(:user) { create(:user) }
-  let!(:todos) { create_list(:todo, 10, created_by: user.id) }
+
+RSpec.describe 'Todos API', type: :request do
+  # initialize test data 
+  let(:user) { FactoryBot.create(:user) }
+  let!(:todos) { FactoryBot.create_list(:todo, 10, created_by: user.id) }
   let(:todo_id) { todos.first.id }
-  # authorize request
   let(:headers) { valid_headers }
 
   # Test suite for GET /todos
   describe 'GET /todos' do
-    # update request with headers
+    # make HTTP get request before each example
     before { get '/todos', params: {}, headers: headers }
 
     it 'returns todos' do

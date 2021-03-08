@@ -4,7 +4,7 @@ RSpec.describe 'Authentication', type: :request do
   # Authentication test suite
   describe 'POST /auth/login' do
     # create test user
-    let!(:user) { create(:user) }
+    let!(:user) { FactoryBot.create(:user) }
     # set headers for authorization
     let(:headers) { valid_headers.except('Authorization') }
     # set test valid and invalid credentials

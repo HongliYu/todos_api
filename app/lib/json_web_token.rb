@@ -18,5 +18,4 @@ class JsonWebToken
     # raise custom error to be handled by custom handler
     raise ExceptionHandler::ExpiredSignature, e.message
   end
-  
 end

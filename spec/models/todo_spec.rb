@@ -1,12 +1,11 @@
 require 'rails_helper'
 
+# Test suite for the Todo model
 RSpec.describe Todo, type: :model do
-	# Association test
-  # ensure Todo model has a 1:m relationship with the Item model
+  # Association test
+  # 一对多的关系，级联删除
   it { should have_many(:items).dependent(:destroy) }
-  # Validation tests
-  # ensure columns title and created_by are present before saving
+  # 相关字段的存在性验证
   it { should validate_presence_of(:title) }
   it { should validate_presence_of(:created_by) }
-
 end

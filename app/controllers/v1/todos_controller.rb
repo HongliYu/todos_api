@@ -1,17 +1,16 @@
 module V1
 
   class TodosController < ApplicationController
-  	before_action :set_todo, only: [:show, :update, :destroy]
+    before_action :set_todo, only: [:show, :update, :destroy]
 
-  	# GET /todos
+    # GET /todos
     def index
       @todos = current_user.todos.paginate(page: params[:page], per_page: 20)
       json_response(@todos)
     end
 
-  	# POST /todos
+    # POST /todos
     def create
-      # create todos belonging to current user
       @todo = current_user.todos.create!(todo_params)
       json_response(@todo, :created)
     end
@@ -33,7 +32,7 @@ module V1
       head :no_content
     end
 
-  private
+    private
 
     def todo_params
       # whitelist params
@@ -43,7 +42,6 @@ module V1
     def set_todo
       @todo = Todo.find(params[:id])
     end
-
   end
 
 end

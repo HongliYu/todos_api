@@ -1,11 +1,24 @@
 # README
 
-* Ruby 2.3.3
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-* Rails 5.0.2
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
 
 * Configuration
 
-* How to run the test suite: rspec
+* Database creation
 
-* Has been deployed on heroku: https://desolate-sea-54055.herokuapp.com/
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
